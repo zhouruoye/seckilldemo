@@ -53,6 +53,8 @@ public class MD5Util {
         System.out.println(md5("211"));
         System.out.println(inputPassToEncodePass("211"));
         System.out.println(EncodePassToDBPass("211"));
-        System.out.println(inputPassToDBPass("211"));
+
+        //密码123456
+        System.out.println(inputPassToDBPass("d3b1294a61a07da9b49b6e22b2cbd7f9"));
     }
 }

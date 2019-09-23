@@ -7,12 +7,16 @@
       <result column="password" property="password" javaType="java.lang.String" jdbcType="VARCHAR" />
       <result column="salt" property="salt" javaType="java.lang.String" jdbcType="VARCHAR" />
       <result column="head" property="head" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <result column="head" property="registerTime" javaType="java.util.Date" jdbcType="DATE" />
-      <result column="head" property="lastLoginTime" javaType="java.util.Date" jdbcType="DATE" />
-      <result column="head" property="lastLoginTime" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <result column="register_time" property="registerTime" javaType="java.util.Date" jdbcType="DATE" />
+      <result column="last_login_time" property="lastLoginTime" javaType="java.util.Date" jdbcType="DATE" />
+      <result column="login_count" property="loginCount" javaType="java.lang.Integer" jdbcType="INTEGER" />
   </resultMap>
   
   <select id="queryList" resultMap="BaseResultMap">
     SELECT * from SECKILL_USER
   </select>
+
+    <select id="queryUserById" resultMap="BaseResultMap">
+      SELECT * from SECKILL_USER where id = #{id}
+   </select>
 </mapper>

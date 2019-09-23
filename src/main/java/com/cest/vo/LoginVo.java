@@ -8,11 +8,11 @@ import javax.validation.constraints.NotNull;
 @Data
 public class LoginVo {
 	
-	@NotNull
+	@NotNull(message = "手机号不能为空")
 	private String mobile;
 	
-	@NotNull
-	@Length(min=32)
+	@NotNull(message = "密码不能为空")
+	@Length(min = 32,max = 32)
 	private String password;
 	
 	@Override
