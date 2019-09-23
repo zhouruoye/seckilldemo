@@ -2,6 +2,15 @@ server:
   port: 8090
 
 spring:
+ thymeleaf:
+   prefix: classpath:/templates/
+   suffix: .html
+   cache: false
+   servlet:
+     content-type: text/html
+   enabled: true
+   encoding: UTF-8
+   mode: HTML5
  datasource:
     name: mysql_test
     type: com.alibaba.druid.pool.DruidDataSource
@@ -45,8 +54,6 @@ mybatis:
   type-aliases-package: com.cest.entity
 
 #redis 配置
-
-#redis
 redis:
   host: 129.211.31.178
   port: 36379

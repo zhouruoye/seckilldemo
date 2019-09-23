@@ -1,5 +1,6 @@
 package com.cest.controller;
 
+import com.cest.dao.SecKillUserMapper;
 import com.cest.dao.UserMapper;
 import com.cest.entity.User;
 import com.cest.redis.RedisService;
@@ -19,11 +20,15 @@ public class TestController {
     private UserMapper userMapper;
 
     @Autowired
+    private SecKillUserMapper secKillUserMapper;
+
+    @Autowired
     private RedisService redisService;
 
     @RequestMapping("/mybatis")
     public String testMybatis() {
         List<User> users = userMapper.queryList();
+        secKillUserMapper.queryList();
         System.out.println(111);
         return "Hello Mybatis";
     }
@@ -34,7 +39,7 @@ public class TestController {
 
         boolean name = redisService.isExists("nameTest");
 
-        String nameTest = redisService.get("nameTest", String.class);
+        redisService.get("nameTest", String.class);
 
         System.out.println(111);
         return "Hello Redis";
