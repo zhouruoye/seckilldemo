@@ -1,7 +1,7 @@
-package com.cest.exception;
+package com.cest.core.exception;
 
-import com.cest.util.CodeMsg;
-import com.cest.util.Result;
+import com.cest.common.util.CodeMsg;
+import com.cest.common.util.Result;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ControllerAdvice;

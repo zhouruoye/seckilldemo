@@ -1,6 +1,6 @@
-package com.cest.exception;
+package com.cest.core.exception;
 
-import com.cest.util.CodeMsg;
+import com.cest.common.util.CodeMsg;
 
 /**
  * 自定义异常

@@ -1,4 +1,4 @@
-package com.cest.redis;
+package com.cest.core.redis;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

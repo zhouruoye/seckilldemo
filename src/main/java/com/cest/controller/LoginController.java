@@ -1,8 +1,8 @@
 package com.cest.controller;
 
 import com.cest.service.MiaoshaUserService;
-import com.cest.util.Result;
-import com.cest.vo.LoginVo;
+import com.cest.common.util.Result;
+import com.cest.pojo.vo.LoginVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

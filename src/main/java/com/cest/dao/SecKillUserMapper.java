@@ -1,6 +1,6 @@
 package com.cest.dao;
 
-import com.cest.entity.SecKillUser;
+import com.cest.pojo.entity.SecKillUser;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

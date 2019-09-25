@@ -1,4 +1,4 @@
-package com.cest.entity;
+package com.cest.pojo.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

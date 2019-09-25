@@ -1,11 +1,11 @@
 package com.cest.service;
 
 import com.cest.dao.SecKillUserMapper;
-import com.cest.entity.SecKillUser;
-import com.cest.exception.DefineException;
-import com.cest.util.CodeMsg;
-import com.cest.util.MD5Util;
-import com.cest.vo.LoginVo;
+import com.cest.pojo.entity.SecKillUser;
+import com.cest.core.exception.DefineException;
+import com.cest.common.util.CodeMsg;
+import com.cest.common.util.MD5Util;
+import com.cest.pojo.vo.LoginVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

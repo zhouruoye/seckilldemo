@@ -1,4 +1,4 @@
-package com.cest.util;
+package com.cest.common.util;
 
 /**
  * Created by cestlavie on 2019/9/23.

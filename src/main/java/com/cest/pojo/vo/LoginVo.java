@@ -1,4 +1,4 @@
-package com.cest.vo;
+package com.cest.pojo.vo;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;

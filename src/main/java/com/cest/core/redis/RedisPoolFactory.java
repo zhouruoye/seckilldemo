@@ -1,4 +1,4 @@
-package com.cest.redis;
+package com.cest.core.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

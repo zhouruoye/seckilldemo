@@ -1,4 +1,4 @@
-package com.cest.util;
+package com.cest.common.util;
 
 import java.util.UUID;
 

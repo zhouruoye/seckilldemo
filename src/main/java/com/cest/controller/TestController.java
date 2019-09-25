@@ -2,8 +2,8 @@ package com.cest.controller;
 
 import com.cest.dao.SecKillUserMapper;
 import com.cest.dao.UserMapper;
-import com.cest.entity.User;
-import com.cest.redis.RedisService;
+import com.cest.pojo.entity.User;
+import com.cest.core.redis.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
