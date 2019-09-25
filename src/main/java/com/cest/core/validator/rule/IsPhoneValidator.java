@@ -14,16 +14,20 @@ public class IsPhoneValidator implements ConstraintValidator<IsPhone,String> {
 
     private boolean required = false;
 
+    //初始化 拿到注解
     @Override
     public void initialize(IsPhone constraintAnnotation) {
+        //默认值
         required = constraintAnnotation.required();
     }
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
+        //必输的
         if(required) {
             return ValidatorUtil.isMobile(value);
         }else {
+            //非必输
             if(StringUtils.isEmpty(value)) {
                 return true;
             }else {

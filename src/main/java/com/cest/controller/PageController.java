@@ -1,8 +1,6 @@
 package com.cest.controller;
 
-import com.cest.pojo.entity.SecKillUser;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -19,8 +17,7 @@ public class PageController {
     }
 
     @RequestMapping("/to_list")
-    public String list(Model model,SecKillUser user) {
-        model.addAttribute("user", user);
+    public String list() {
         return "goods_list";
     }
 }

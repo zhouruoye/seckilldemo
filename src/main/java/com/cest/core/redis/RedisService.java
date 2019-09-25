@@ -1,6 +1,7 @@
 package com.cest.core.redis;
 
 import com.alibaba.fastjson.JSON;
+import com.cest.core.redis.key.KeyPre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
@@ -22,17 +23,13 @@ public class RedisService {
      * @param <T>
      * @return
      */
-    public <T> T get(String key,Class<T> tClass){
+    public <T> T get(KeyPre pre, String key, Class<T> tClass){
         Jedis resource = null;
         try {
             resource = jedisPool.getResource();
-            String str = resource.get(key);
-            if(str == null || str.length() <= 0){
-                return null;
-            }
-
+            String realKey = pre.getPre() + resource.get(key);
+            String str = resource.get(realKey);
             return stringToBean(str,tClass);
-
         } finally {
             closeJedis(resource);
         }
@@ -45,15 +42,17 @@ public class RedisService {
      * @param <T>
      * @return
      */
-    public <T> boolean set(String key,T t){
+    public <T> boolean set(KeyPre pre, String key,T t){
         Jedis resource = null;
         try {
             resource = jedisPool.getResource();
+            String realKey = pre.getPre() + key;
+
             String str = beanToString(t);
             if(str == null || str.length() <= 0){
                 return false;
             }
-            resource.set(key, str);
+            resource.set(realKey, str);
             return true;
         } finally {
             closeJedis(resource);
@@ -66,11 +65,12 @@ public class RedisService {
      * @param <T>
      * @return
      */
-    public <T> boolean isExists(String key){
+    public <T> boolean isExists(KeyPre pre, String key){
         Jedis resource = null;
         try {
             resource = jedisPool.getResource();
-            return resource.exists(key);
+            String realKey = pre.getPre() + key;
+            return resource.exists(realKey);
         } finally {
             closeJedis(resource);
         }

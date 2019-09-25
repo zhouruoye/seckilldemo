@@ -35,11 +35,11 @@ public class TestController {
 
     @RequestMapping("/redis")
     public String testRedis() {
-        boolean set = redisService.set("nameTest", "tingting");
-
-        boolean name = redisService.isExists("nameTest");
-
-        redisService.get("nameTest", String.class);
+        //boolean set = redisService.set("nameTest", "tingting");
+        //
+        //boolean name = redisService.isExists("nameTest");
+        //
+        //redisService.get("nameTest", String.class);
 
         System.out.println(111);
         return "Hello Redis";

@@ -27,7 +27,7 @@ public class LoginController {
     public Result<Boolean> doLogin(HttpServletResponse response, @Valid LoginVo loginVo) {
         log.info(loginVo.toString());
         //登录
-        miaoshaUserService.login(loginVo);
+        miaoshaUserService.login(response,loginVo);
         return Result.success(true);
     }
 }
