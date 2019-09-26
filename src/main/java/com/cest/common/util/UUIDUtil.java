@@ -1,7 +1,5 @@
 package com.cest.common.util;
 
-import com.cest.pojo.entity.User;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.UUID;

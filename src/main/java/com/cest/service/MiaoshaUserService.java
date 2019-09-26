@@ -11,6 +11,7 @@ import com.cest.pojo.entity.SecKillUser;
 import com.cest.pojo.vo.LoginVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -53,6 +54,18 @@ public class MiaoshaUserService {
 
     @Autowired
     private RedisService redisService;
+
+    /**
+     * 通过token拿到用户信息
+     * @param token
+     * @return
+     */
+    public SecKillUser getObjectByUser(String token){
+        if(StringUtils.isEmpty(token)){
+            return null;
+        }
+        return null;
+    }
 
     private void addCookie(HttpServletResponse response, String token) {
         //redisService.set(MiaoshaUserKey.token, token, user);
